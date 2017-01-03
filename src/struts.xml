@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />   
+    <constant name="struts.devMode" value="false" />
+    
+    <package name="default" namespace="/" extends="struts-default,json-default">
+    
+        <global-results>
+            <result name="error">/error.jsp</result>
+            <result name="GLOBAL_JSON_RESULT" type="json"></result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>            
+        </global-exception-mappings>
+		
+		
+		<action name="welcome-to-clik2fix-home-improvement-services" class="com.clik2fix.welcome.action.WelcomeAction">
+			<interceptor-ref name="defaultStack" />			
+			<result name="goto-index-page">/index.jsp</result>	
+		</action> 
+		
+		<action name="place-clik2fix-order" class="com.clik2fix.order.action.PlaceOrderAction">
+			<interceptor-ref name="defaultStack" />			
+			<result name="goto-place-order-page">/ticket.jsp</result>	
+		</action>
+		
+		<action name="confirm-clik2fix-order" class="com.clik2fix.order.action.ConfirmOrderAction">
+			<interceptor-ref name="defaultStack" />			
+		</action>	
+		
+		<action name="track-clik2fix-order" class="com.clik2fix.order.action.TrackOrderAction">
+			<interceptor-ref name="defaultStack" />			
+		</action>
+			
+		<action name="contact-clik2fix" class="com.clik2fix.contact.action.ContactUsAction">
+			<interceptor-ref name="defaultStack" />			
+		</action>
+		
+		<action name="faq-clik2fix" class="com.clik2fix.faq.action.FaqAction">
+			<interceptor-ref name="defaultStack" />			
+			<result name="goto-faq-page">/faq.jsp</result>
+		</action>
+		
+		<action name="services-offered-by-clik2fix" class="com.clik2fix.services.action.ServicesAction">
+			<interceptor-ref name="defaultStack" />			
+			<result name="goto-services-page">/services.jsp</result>
+		</action>		
+		
+		<action name="track-your-clik2fix-order" class="com.clik2fix.order.action.TrackOrderPageAction">
+			<interceptor-ref name="defaultStack" />			
+			<result name="goto-track-order-page">/track.jsp</result>
+		</action>
+		
+		<action name="about-clik2fix" class="com.clik2fix.about.action.AboutAction">
+			<interceptor-ref name="defaultStack" />			
+			<result name="goto-about-page">/about.jsp</result>
+		</action>	
+
+		<action name="reach-clik2fix" class="com.clik2fix.contact.action.ContactPageAction">
+			<interceptor-ref name="defaultStack" />			
+			<result name="goto-contact-page">/contact.jsp</result>
+		</action>
+		
+		<action name="send-otp-clik2fix" class="com.clik2fix.order.action.SendOTPAction">
+			<interceptor-ref name="defaultStack" />			
+		</action>
+		
+		<action name="verify-otp-clik2fix" class="com.clik2fix.order.action.VerifyOTPAction">
+			<interceptor-ref name="defaultStack" />			
+		</action>		
+		
+											
+	</package>
+		    
+</struts>    

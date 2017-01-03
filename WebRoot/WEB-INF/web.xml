@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <servlet-name>CustFeedbackSrv</servlet-name>
+    <servlet-class>com.clikfix.feedback.CustFeedbackSrv</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CustInfo</servlet-name>
+    <servlet-class>com.clik2fix.cust.CustInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OTP</servlet-name>
+    <servlet-class>com.clik2fix.otp.OTP</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Contact</servlet-name>
+    <servlet-class>com.clik2fix.cust.Contact</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PlaceOrder</servlet-name>
+    <servlet-class>com.clik2fix.order.PlaceOrder</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PlaceOrderBySearch</servlet-name>
+    <servlet-class>com.clik2fix.order.PlaceOrderBySearch</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ContactUs</servlet-name>
+    <servlet-class>com.clik2fix.contact.ContactUs</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>TrackOrder</servlet-name>
+    <servlet-class>com.clik2fix.order.TrackOrder</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>CustFeedbackSrv</servlet-name>
+    <url-pattern>/CustFeedbackSrv</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CustInfo</servlet-name>
+    <url-pattern>/CustInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OTP</servlet-name>
+    <url-pattern>/OTP</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Contact</servlet-name>
+    <url-pattern>/Contact</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PlaceOrder</servlet-name>
+    <url-pattern>/PlaceOrder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PlaceOrderBySearch</servlet-name>
+    <url-pattern>/PlaceOrderBySearch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ContactUs</servlet-name>
+    <url-pattern>/ContactUs</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TrackOrder</servlet-name>
+    <url-pattern>/TrackOrder</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>welcome.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+  	<filter-name>struts2</filter-name>
+  	<filter-class>
+  		org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
+  	</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>struts2</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping></web-app>
